@@ -1,4 +1,5 @@
 import sys
+import os
 
 from github import Github
 # Authentication is defined via github.Auth
@@ -20,6 +21,8 @@ issue = open_issues[0]
 attachment_url = issue.body.split("(")[1].split(")")[0]
 issue_num = issue.number
 issue_title = issue.title
+
+wget.download(attachment_url, "./report.html")
 
 f = open("output_context.sh", "a")
 f.write(f'echo \"::set-output name=issue_num::{issue_num}\"\n')
