@@ -1,6 +1,6 @@
 import sys
 import os
-
+import wget
 from github import Github
 # Authentication is defined via github.Auth
 from github import Auth

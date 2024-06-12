@@ -3,7 +3,7 @@ FROM python:3.9-alpine3.18
 MAINTAINER Zan Yuan <seqyuan@gmail.com>
 ENV LANG=en_US.UTF-8
 
-RUN pip install PyGithub
+RUN pip install PyGithub && pip install wget
 
 WORKDIR /tmp
 
