@@ -1,0 +1,25 @@
+name: 'top issue attachment url'
+description: 'get repo latest issue attachment url'
+inputs:
+  token: 
+    description: 'token to view repositry'
+    required: true
+
+  repo:
+    description: 'repositry eg. seqyuan/mail2cust'
+    required: true
+
+outputs: 
+  issue_num: 
+    description: "the latest issue id number"
+  issue_title: 
+    description: "the latest issue title"
+  attachment_url: 
+    description: "the latest issue attachment url, only one file"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }} 
+    - ${{ inputs.repo }}
