@@ -1,4 +1,4 @@
-FROM python3:latest
+FROM python:3.9-alpine3.18
 
 MAINTAINER Zan Yuan <seqyuan@gmail.com>
 ENV LANG=en_US.UTF-8
